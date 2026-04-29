@@ -1,17 +1,17 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { PrismaModule } from './common/db/prisma.module';
-import { OrderModule } from './order/order.module';
-import { CartModule } from './cart/cart.module';
-import { ProductModule } from './product/product.module';
+import { CartModule } from './application/cart/cart.module';
+import { OrderModule } from './application/order/order.module';
+import { ProductModule } from './application/product/product.module';
+import { PrismaModule } from './modules/prisma/prisma.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true, cache: true }),
     PrismaModule,
-    OrderModule,
-    CartModule,
     ProductModule,
+    CartModule,
+    OrderModule,
   ],
 })
 export class AppModule {}

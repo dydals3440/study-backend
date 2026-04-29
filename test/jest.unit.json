@@ -1,0 +1,21 @@
+{
+  "moduleFileExtensions": ["ts", "js", "json"],
+  "rootDir": "..",
+  "testMatch": ["<rootDir>/src/**/*.spec.ts"],
+  "transform": {
+    "^.+\\.(t|j)s$": ["ts-jest", { "isolatedModules": true }]
+  },
+  "transformIgnorePatterns": ["node_modules/(?:(?!@faker-js/).)*$"],
+  "moduleNameMapper": {
+    "^(\\.{1,2}/.*)\\.js$": "$1"
+  },
+  "testEnvironment": "node",
+  "collectCoverageFrom": [
+    "<rootDir>/src/**/*.ts",
+    "!<rootDir>/src/generated/**",
+    "!<rootDir>/src/main.ts",
+    "!<rootDir>/src/**/*.module.ts",
+    "!<rootDir>/src/**/*.api-spec.ts"
+  ],
+  "coverageDirectory": "<rootDir>/coverage"
+}

@@ -1,0 +1,14 @@
+{
+  "moduleFileExtensions": ["ts", "js", "json"],
+  "rootDir": "..",
+  "testMatch": ["<rootDir>/test/integration/**/*.int-spec.ts"],
+  "transform": {
+    "^.+\\.(t|j)s$": ["ts-jest", { "isolatedModules": true }]
+  },
+  "transformIgnorePatterns": ["node_modules/(?:(?!@faker-js/).)*$"],
+  "moduleNameMapper": {
+    "^(\\.{1,2}/.*)\\.js$": "$1"
+  },
+  "testEnvironment": "node",
+  "testTimeout": 60000
+}
