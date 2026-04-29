@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model cart {
+  id          Int       @id @default(autoincrement())
+  customer_id Int?
+  product_id  Int?
+  unit_price  Int?
+  qty         Int?
+  created_at  DateTime? @db.Timestamp(0)
+  updated_at  DateTime? @db.Timestamp(0)
+}
+
+model order {
+  id          Int       @id @default(autoincrement())
+  customer_id Int?
+  order_no    String?   @db.VarChar(255)
+  total_price Int?
+  status      String?   @db.VarChar(255)
+  created_at  DateTime? @db.Timestamp(0)
+  updated_at  DateTime? @db.Timestamp(0)
+}
+
+model ordersDetail {
+  id         Int       @id @default(autoincrement())
+  order_no   String?   @db.VarChar(255)
+  product_id Int?
+  unit_price Int?
+  qty        Int?
+  created_at DateTime? @db.Timestamp(0)
+  updated_at DateTime? @db.Timestamp(0)
+}
+
+model product {
+  id          Int     @id @default(autoincrement())
+  productname String? @db.VarChar(255)
+  price       Int?
+  qty         Int?
+}

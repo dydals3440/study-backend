@@ -1,0 +1,83 @@
+# === Build artifacts ===
+/dist
+/build
+/node_modules
+
+# === Logs ===
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# === OS ===
+.DS_Store
+Thumbs.db
+
+# === Test / coverage ===
+/coverage
+/.nyc_output
+
+# === IDE / editors ===
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.history/
+*.swp
+*.swo
+*~
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# === Secrets / env (track only the example) ===
+.env
+.env.*
+!.env.example
+.envrc
+secrets/
+
+# === Keys / certs ===
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+*.gpg
+
+# === Database / dumps (init.sql is tracked under docker/) ===
+*.sqlite
+*.sqlite3
+*.db
+*.sql.gz
+*.dump
+*.bak
+pgdata/
+mysqldata/
+docker/**/data/
+
+# === Temp / runtime ===
+.temp
+.tmp
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# === Diagnostic reports ===
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# === Prisma generated client ===
+/generated
